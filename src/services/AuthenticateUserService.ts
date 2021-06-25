@@ -16,7 +16,7 @@ interface iAuthenticateRequest{
 class AuthenticateUserService{
     async execute({email, password}: iAuthenticateRequest){
         const usersRepositories = getCustomRepository(UsersRepositories);
-        console.log(email);
+        
         const user = await usersRepositories.findOne({
             email
         });
@@ -43,3 +43,4 @@ class AuthenticateUserService{
 }
 
 export {AuthenticateUserService}
+
